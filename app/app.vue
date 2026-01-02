@@ -1,29 +1,14 @@
 <template>
   <div class="layout">
     <main>
-      <h1>¡Dominio en venta!</h1>
-      <p>Puedes comprar este dominio en precio promocional esta navidad</p>
-      <a
-        :href="whatsappUrl"
-        target="_blank"
-        class="christmas-button"
-      >
-        🎄 Consultar precio 🎅
-      </a>
+      <h1>Estudio Motix</h1>
+      <p>Página en desarrollo</p>
     </main>
   </div>
 </template>
 
 <script setup>
-import { onMounted, computed } from 'vue';
-
-const whatsappMessage = "Hola! Soy Lucas Bernath y esto es Jackass";
-
-const whatsappUrl = computed(() => {
-  const phone = "5491166411355";
-  const message = encodeURIComponent(whatsappMessage);
-  return `https://wa.me/${phone}?text=${message}`;
-});
+import { onMounted } from 'vue';
 
 onMounted(() => {
   function createSnowflake() {
@@ -104,32 +89,6 @@ main {
   z-index: 1;
   color: white;
   padding: 20px;
-}
-
-.christmas-button {
-  padding: 15px 30px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: white;
-  background: linear-gradient(135deg, #c41e3a 0%, #165b33 100%);
-  border: 3px solid #ffd700;
-  border-radius: 50px;
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
-  transition: all 0.3s ease;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-
-.christmas-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
-  background: linear-gradient(135deg, #165b33 0%, #c41e3a 100%);
-}
-
-.christmas-button:active {
-  transform: translateY(-1px);
 }
 
 h1, p {
